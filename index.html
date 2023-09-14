@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mzansi Networks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Mzansi Networks</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Sign Up">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Mzansi Networks</h2>
+            <div class="paragraph">
+            <p>"Small Businesses are the backbone of our economy"
+              <p>  by Elen Tauscher former US senator </p> 
+            </p>
+            </div>
+            <br>
+            <p>
+                SMMEs (Small Medium Micro Enterprises) are arguably the most important types of businesses in SA 
+                as they are businesses which are run by your average citizen and most are extremely friendly and homely
+                .These companies also do the most to grow our economy. This is why I (Nanda Athmanandh) created Mzansi Networks
+                to help SMMEs grow their business through networking with other businesses. They can find customers and suppliers as well as help eachother grow 
+            </p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Welcome to Mzansi Networks, where connectivity meets opportunity. We are your trusted partner in the world of networking, dedicated to helping businesses of all sizes thrive in the digital age. Our mission is simple yet powerful: to connect businesses, empower growth, and drive innovation through cutting-edge networking solutions.
+
+                Mzansi Networks was born out of a passion for technology and a deep understanding of the vital role that networking plays in modern business. Established in [2023], we have steadily grown into a dynamic force in the industry, serving clients across various sectors and transforming the way they operate.
+                As we continue to grow and innovate, we invite you to join us on this exciting journey. Together, we can unlock the full potential of your business through robust, secure, and efficient networking solutions.
+            </p>
+
+        </div>
+        
+    </section>
+    <section id="services">
+        <div class="container"> 
+            <h1>Services</h1>
+            <p>
+                Mzansi Networks provides a space for SMME owners and manangers to advertise for their brands and communicate with other business owners.
+                Once they have completed their profile they will be able to have their brands live on our website 
+                It will be available for those who search for your type of business and region. they will be able to message 
+                you or contact you via your email or phone number. 
+            </p>
+            <br>
+            <div class="disclaimer">
+                <h1>
+                    ***DISCLAIMER*** 
+                </h1> 
+                <p>
+                    Signing up does not guarantee sales and/or finding supliers 
+                </p>
+
+    <section id="sign up">
+    <div class="form"> 
+        <h1>Sign Up</h1>
+    <form id="signup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("signup-form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the form from actually submitting
+
+            // Get user input
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if local storage is supported
+            if (typeof(Storage) !== "undefined") {
+                // Store the username and password in local storage
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+
+                // Display a success message
+                document.getElementById("message").innerHTML = "Sign-up successful!";
+            } else {
+                document.getElementById("message").innerHTML = "Local storage is not supported in your browser.";
+            }
+        });
+    </script>
+
+    </section>
+    <!-- More sections for services, portfolio, blog, and contact can be added -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mzansi Networks. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
